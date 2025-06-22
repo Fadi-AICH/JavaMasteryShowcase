@@ -1,0 +1,34 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="src.java.org.example.GestionElevesController">
+    <top>
+        <Label text="Gestion des Élèves" style="-fx-font-size: 24px; -fx-padding: 20;" />
+    </top>
+    <center>
+        <VBox spacing="10" padding="20">
+            <HBox spacing="10">
+                <TextField fx:id="codeField" promptText="Code" />
+                <TextField fx:id="nomField" promptText="Nom" />
+                <TextField fx:id="prenomField" promptText="Prénom" />
+            </HBox>
+            <HBox spacing="10">
+                <TextField fx:id="niveauField" promptText="Niveau" />
+                <TextField fx:id="filiereField" promptText="Filière" />
+                <Button text="Ajouter" onAction="#handleAjouter" />
+            </HBox>
+            <TableView fx:id="tableView" prefHeight="300">
+                <columns>
+                    <TableColumn fx:id="codeCol" text="Code" />
+                    <TableColumn fx:id="nomCol" text="Nom" />
+                    <TableColumn fx:id="prenomCol" text="Prénom" />
+                    <TableColumn fx:id="niveauCol" text="Niveau" />
+                    <TableColumn fx:id="filiereCol" text="Filière" />
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>
